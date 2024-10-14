@@ -13,7 +13,7 @@ html, body {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #555;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -24,6 +24,10 @@ header, footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+}
+
+span {
+    color: red;
 }
 
 nav ul {
@@ -39,6 +43,15 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Cambia el color al pasar el cursor */
+}
+
+nav ul li a.active {
+    color: goldenrod; /* Color para la página activa */
 }
 
 main {
@@ -49,7 +62,12 @@ main {
 }
 
 section {
-    margin-bottom: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Estilo para la página de inicio */
@@ -57,8 +75,8 @@ section {
     background-image: url('https://images.unsplash.com/photo-1593642634367-d91a135587b5');
     background-size: cover;
     background-position: center;
-    height: 100%;
     width: 100%;
+    height: calc(100vh - 130px); /* Restar la altura del header y footer */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,13 +84,25 @@ section {
     text-align: center;
 }
 
-/* Estilo para las imágenes de la galería */
+.highlight {
+    font-size: 1em;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Al cargar la página */
+body:hover .highlight {
+    font-size: 2em;
+    color: goldenrod;
+}
+
+/* Estilo para las imágenes de la galería proyectos */
 .gallery {
-    padding-top: 5%;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 .thumbnail-container {
@@ -102,6 +132,8 @@ section {
     display: flex;
     align-items: center;
     gap: 2rem;
+    padding: 5%;
+    color:white
 }
 
 .profile-pic {
@@ -129,7 +161,7 @@ section {
     align-self: flex-start;
     width: 66%;
     margin-bottom: 1rem;
-    padding-left: 21%;
+    
 }
 
 .contact-form {
@@ -139,6 +171,9 @@ section {
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    text-align: left;
+    background-color:darkgray;
+
 }
 
 .contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
@@ -158,7 +193,9 @@ section {
 }
 
 .contact-form input::placeholder, .contact-form textarea::placeholder {
-    color: #999;
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 .contact-form button {
@@ -173,9 +210,19 @@ section {
     background-color: #555;
 }
 
+/* Iconos sociales en el footer */
+.icons {
+    width: 24px;
+    height: 24px;
+    margin-left: 1rem;
+}
+
 /* Asegurar que el footer esté al final de la pantalla */
 footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
 }
