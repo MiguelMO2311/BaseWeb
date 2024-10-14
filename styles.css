@@ -6,6 +6,8 @@
 
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -41,11 +43,27 @@ nav ul li a {
 
 main {
     flex: 1;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 section {
     margin-bottom: 2rem;
+}
+
+/* Estilo para la página de inicio */
+#home {
+    background-image: url('https://images.unsplash.com/photo-1593642634367-d91a135587b5');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
 }
 
 /* Estilo para las imágenes de la galería */
