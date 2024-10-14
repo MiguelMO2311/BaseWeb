@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Estilo para las imágenes de la galería */
+.gallery {
+    padding-top: 5%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.thumbnail {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.3);
+}
+
+/* Contenedor de perfil en la página Sobre Mí */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(2); /* Aumentar el tamaño al doble */
+}
+
+/* Estilo para la página de contacto */
+.contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.contact-title {
+    align-self: flex-start;
+    width: 66%;
+    margin-bottom: 1rem;
+    padding-left: 21%;
+}
+
+.contact-form {
+    width: 66%;
+    background: #fff;
+    padding: 2rem;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input:hover, .contact-form textarea:hover {
+    background-color: #e0e0e0;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #999;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Asegurar que el footer esté al final de la pantalla */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
